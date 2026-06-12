@@ -1,14 +1,15 @@
+#task 4_sunday 7 may
 
 
 
 
-# Task 1: Age Gate
-age = int(input("Enter your age: "))
+# # Task 1: Age Gate
+# age = int(input("Enter your age: "))
 
-if age >= 18:
-    print("Welcome to the Adventure Zone!")
-else:
-    print("Sorry, Kids Zone Only!")
+# if age >= 18:
+#     print("Welcome to the Adventure Zone!")
+# else:
+#     print("Sorry, Kids Zone Only!")
 
 
 
@@ -73,3 +74,64 @@ else:
 
 
 
+
+
+
+
+
+
+
+
+
+#tupple task
+#Task 1: Birthday Tuple
+birthday = (2, "March", 2007)
+
+print(birthday[0])
+print(birthday[1])
+print(birthday[2])
+
+
+
+
+
+#Task 2: Student Profile
+student = ("prathamesh", 20, "nanded")
+
+print("Name:", student[0])
+print("City:", student[2])
+
+
+
+
+#Task 3: Favorite Games
+games = ( "Free Fire", "Cricket", "GTA5")
+
+print(games[-1])
+
+
+
+
+
+
+
+
+#Task 4: Tuple Detective
+colors = ("Red", "Blue", "Green")
+
+print("First color:", colors[0])
+# print("Second color:", colors[1])
+# print("Third color:", colors[2])
+
+
+
+
+
+# #Task 5: Tuple Unpacking
+# hero = ("rohit", 45, "Marvel")
+
+# name, age, universe = hero
+
+# print(name)
+# print(age)
+# print(universe)
