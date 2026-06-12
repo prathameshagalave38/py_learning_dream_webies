@@ -23,3 +23,17 @@ colleg = {
 }
 colleg.pop("name")
 print(colleg)
+
+
+
+
+
+
+info = {
+  "name": "prathamesh",
+  "dob": "2mar",
+  "year": 2007
+}
+print(info)
+info["fev color"] = "orange"
+print(info)
