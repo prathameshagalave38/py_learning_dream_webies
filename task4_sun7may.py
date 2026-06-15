@@ -135,3 +135,30 @@ print("First color:", colors[0])
 # print(name)
 # print(age)
 # print(universe)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
