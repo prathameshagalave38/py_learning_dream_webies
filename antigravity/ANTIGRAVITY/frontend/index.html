@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribal E-Marketplace Portal - Home</title>
+    
+    <!-- Design System Stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <!-- Dynamic Header Navigation (Injected by app.js) -->
+    <header></header>
+
+    <!-- Premium Welcoming Hero Banner -->
+    <section style="background: linear-gradient(135deg, var(--primary), hsl(154, 42%, 10%)); color: white; padding: 100px 20px; text-align: center; position: relative; overflow: hidden; border-bottom: 4px solid var(--accent);">
+        <div style="max-width: 800px; margin: 0 auto; position: relative; z-index: 10;">
+            <h1 data-i18n="hero_title" style="font-size: 52px; font-weight: 800; margin-bottom: 20px; letter-spacing: -1px; text-shadow: 0 4px 12px rgba(0,0,0,0.3);">Authentic Tribal Heritage</h1>
+            <p data-i18n="hero_subtitle" style="font-size: 20px; opacity: 0.9; margin-bottom: 35px; line-height: 1.6; font-family: var(--font-body);">Direct livelihood support for tribal artists, craftsmen, and organic forest farmers.</p>
+            <a href="products.html" class="btn btn-accent" data-i18n="btn_explore" style="font-size:18px; padding:14px 30px; box-shadow:var(--shadow-md);">Browse Crafts</a>
+        </div>
+        
+        <!-- Abstract Background Glow Shapes -->
+        <div style="position: absolute; top: -50px; left: -50px; width: 200px; height: 200px; border-radius: 50%; background-color: var(--accent-glow); filter: blur(50px); opacity: 0.5;"></div>
+        <div style="position: absolute; bottom: -50px; right: -50px; width: 250px; height: 250px; border-radius: 50%; background-color: var(--primary-glow); filter: blur(60px); opacity: 0.6;"></div>
+    </section>
+
+    <!-- Featured Categories Quick Links -->
+    <section class="container">
+        <h2 style="color: var(--primary); text-align: center; margin-bottom: 15px; font-size: 32px;">Explore Traditional Guilds</h2>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">Preserving ancient techniques through handcrafted excellence.</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+            <div style="background-color: var(--bg-card); padding: 30px 20px; border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; box-shadow: var(--shadow-sm); cursor: pointer; transition: all var(--transition-speed);" onclick="window.location.href='products.html?category_id=1'">
+                <span style="font-size: 40px; display: block; margin-bottom: 15px;">🎨</span>
+                <h3 style="margin-bottom: 8px; color: var(--text);">Tribal Paintings</h3>
+                <p style="font-size: 14px; color: var(--text-muted);">Traditional Warli & Gond artwork canvas.</p>
+            </div>
+            
+            <div style="background-color: var(--bg-card); padding: 30px 20px; border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; box-shadow: var(--shadow-sm); cursor: pointer; transition: all var(--transition-speed);" onclick="window.location.href='products.html?category_id=2'">
+                <span style="font-size: 40px; display: block; margin-bottom: 15px;">🏺</span>
+                <h3 style="margin-bottom: 8px; color: var(--text);">Handicrafts</h3>
+                <p style="font-size: 14px; color: var(--text-muted);">Bamboo water bottles & wood carvings.</p>
+            </div>
+            
+            <div style="background-color: var(--bg-card); padding: 30px 20px; border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; box-shadow: var(--shadow-sm); cursor: pointer; transition: all var(--transition-speed);" onclick="window.location.href='products.html?category_id=3'">
+                <span style="font-size: 40px; display: block; margin-bottom: 15px;">🍯</span>
+                <h3 style="margin-bottom: 8px; color: var(--text);">Organic Foods</h3>
+                <p style="font-size: 14px; color: var(--text-muted);">Wild forest honey & natural spice infusions.</p>
+            </div>
+            
+            <div style="background-color: var(--bg-card); padding: 30px 20px; border-radius: var(--border-radius); border: 1px solid var(--border); text-align: center; box-shadow: var(--shadow-sm); cursor: pointer; transition: all var(--transition-speed);" onclick="window.location.href='products.html?category_id=4'">
+                <span style="font-size: 40px; display: block; margin-bottom: 15px;">📿</span>
+                <h3 style="margin-bottom: 8px; color: var(--text);">Traditional Jewelry</h3>
+                <p style="font-size: 14px; color: var(--text-muted);">Handmade terracotta beads & brass earrings.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Products Dynamic Showcase -->
+    <section class="container" style="margin-top: 80px;">
+        <h2 style="color: var(--primary); text-align: center; margin-bottom: 15px; font-size: 32px;">Trending Artisan Creations</h2>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">Top-rated products crafted and shipped directly from verified community hubs.</p>
+        
+        <div class="product-grid" id="trending-grid">
+            <!-- Dynamically populated by inline script calling products API -->
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section style="background-color: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 80px 20px; margin-top: 80px;">
+        <div class="container" style="margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; flex-wrap: wrap;">
+            <div>
+                <span style="color: var(--accent); font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 2px;">Our Mission</span>
+                <h2 style="color: var(--primary); font-size: 36px; margin: 10px 0 20px 0;">Bridging Tribal Heritages & Modern Markets</h2>
+                <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 16px; line-height: 1.8;">Our marketplace portal connects remote tribal communities directly with customers worldwide. By eliminating middle traders, we guarantee that 100% of artisans receive their rightful earnings. Every purchase funds regional workshops and helps preserve thousands of years of native cultural expressions.</p>
+                <div style="display:flex; gap:30px; margin-top:30px;">
+                    <div>
+                        <div style="font-size:28px; font-weight:800; color:var(--accent);">100%</div>
+                        <div style="font-size:12px; color:var(--text-muted);">Direct Payouts</div>
+                    </div>
+                    <div>
+                        <div style="font-size:28px; font-weight:800; color:var(--accent);">500+</div>
+                        <div style="font-size:12px; color:var(--text-muted);">Verified Artisans</div>
+                    </div>
+                    <div>
+                        <div style="font-size:28px; font-weight:800; color:var(--accent);">Organic</div>
+                        <div style="font-size:12px; color:var(--text-muted);">Forest Sourced</div>
+                    </div>
+                </div>
+            </div>
+            <div style="position: relative;">
+                <!-- Decorative Bordered Frame simulating dynamic image layout -->
+                <div style="width: 100%; padding-top: 75%; background-color: var(--border); border-radius: 16px; border: 4px solid var(--primary); overflow: hidden; box-shadow: var(--shadow-lg);">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'><rect width='400' height='300' fill='%231b4332'/><circle cx='200' cy='150' r='80' fill='%23d97706' opacity='0.7'/><text x='50%25' y='50%25' font-family='Outfit' font-weight='bold' font-size='20' fill='white' dominant-baseline='middle' text-anchor='middle'>Adivasi Art &amp; Culture</text></svg>" alt="Tribal Artisans" style="position: absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Footer Layout (Injected by app.js) -->
+    <footer></footer>
+
+    <!-- Scripts Inclusion -->
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/app.js"></script>
+    
+    <!-- Populate Trending List -->
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            const grid = document.getElementById("trending-grid");
+            if (!grid) return;
+            try {
+                // Fetch limit 3 products as a preview
+                const products = await apiFetch("/products/?limit=3");
+                if (products.length === 0) {
+                    grid.innerHTML = `<div style="grid-column:1/-1; text-align:center; padding:30px; color:var(--text-muted);">No products listed yet.</div>`;
+                    return;
+                }
+                
+                grid.innerHTML = products.map(p => {
+                    const finalPrice = p.discount > 0 ? p.price * (1 - (p.discount / 100)) : p.price;
+                    const fallbackImg = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="225" viewBox="0 0 300 225"><rect width="300" height="225" fill="%231b4332"/><text x="50%25" y="50%25" font-family="Outfit" font-weight="bold" font-size="16" fill="%23d97706" dominant-baseline="middle" text-anchor="middle">${encodeURIComponent(p.name)}</text></svg>`;
+                    const mainImage = p.images.length > 0 ? p.images[0].image_url : fallbackImg;
+                    return `
+                        <div class="product-card" onclick="window.location.href='products.html'" style="cursor:pointer;">
+                            <div class="product-image-wrapper">
+                                <img src="${mainImage}" alt="${p.name}" class="product-image" onerror="this.onerror=null; this.src='${fallbackImg}';">
+                            </div>
+                            <div class="product-details">
+                                <div class="product-community">${p.vendor_community}</div>
+                                <h3 class="product-title" style="height:auto; min-height:44px; margin-bottom:12px;">${p.name}</h3>
+                                <div style="font-weight:bold; font-size:18px; color:var(--text);">Rs. ${finalPrice.toFixed(2)}</div>
+                            </div>
+                        </div>
+                    `;
+                }).join("");
+            } catch(e) {
+                grid.innerHTML = `<div style="grid-column:1/-1; text-align:center; color:var(--text-muted);">Catalog preview currently unavailable.</div>`;
+            }
+        });
+    </script>
+</body>
+</html>

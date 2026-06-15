@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribal E-Marketplace Portal - Cart</title>
+    
+    <!-- Design System Stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <!-- Dynamic Header Navigation (Injected by app.js) -->
+    <header></header>
+
+    <div class="container" style="min-height: 600px;">
+        <h1 style="color:var(--primary); font-size:32px; margin-bottom:10px;">Your Shopping Cart</h1>
+        <p style="color:var(--text-muted); font-size:15px; margin-bottom:30px;">Review your selection and support authentic livelihoods.</p>
+        
+        <div style="display:grid; grid-template-columns: 2fr 1fr; gap:40px; flex-wrap:wrap;">
+            
+            <!-- Items Grid Column -->
+            <div id="cart-items-container">
+                <div style="text-align:center; padding:40px 0; color:var(--text-muted);">Syncing shopping items...</div>
+            </div>
+            
+            <!-- Summary Column -->
+            <div id="cart-summary-card" style="display:none; height:fit-content;">
+                <div style="background-color:var(--bg-card); border:1px solid var(--border); border-radius:var(--border-radius); padding:30px; box-shadow:var(--shadow-sm);">
+                    <h3 style="color:var(--primary); border-bottom:2px solid var(--primary); padding-bottom:12px; margin-bottom:20px;">Order Summary</h3>
+                    
+                    <div style="display:flex; justify-content:space-between; margin-bottom:12px; font-size:15px;">
+                        <span style="color:var(--text-muted);">Basket Subtotal:</span>
+                        <span id="lbl-subtotal" style="font-weight:600;">Rs. 0.00</span>
+                    </div>
+                    
+                    <div style="display:flex; justify-content:space-between; margin-bottom:12px; font-size:15px;">
+                        <span style="color:var(--text-muted);">Coupon Discount:</span>
+                        <span id="lbl-discount" style="font-weight:600; color:var(--success);">- Rs. 0.00</span>
+                    </div>
+                    
+                    <div style="display:flex; justify-content:space-between; margin-bottom:20px; font-size:15px;">
+                        <span style="color:var(--text-muted);">Delivery Logistics:</span>
+                        <span id="lbl-shipping" style="font-weight:600;">Rs. 0.00</span>
+                    </div>
+                    
+                    <div style="display:flex; justify-content:space-between; border-top:1px solid var(--border); padding-top:15px; margin-bottom:25px; font-size:18px; font-weight:800;">
+                        <span style="color:var(--text);">Order Total:</span>
+                        <span id="lbl-total" style="color:var(--primary);">Rs. 0.00</span>
+                    </div>
+                    
+                    <!-- Coupon Application -->
+                    <div style="margin-bottom:25px;">
+                        <label style="display:block; font-size:13px; font-weight:700; margin-bottom:8px; text-transform:uppercase; color:var(--text-muted);">Promotion Code</label>
+                        <div style="display:flex; gap:10px;">
+                            <input type="text" id="coupon-input" class="form-control" placeholder="E.g. WELCOME10" style="padding:10px 12px; font-size:14px;">
+                            <button class="btn btn-outline btn-sm" onclick="applyCoupon()" style="padding:0 15px;">Apply</button>
+                        </div>
+                        <span id="coupon-feedback" style="display:block; margin-top:8px; font-size:12px; font-weight:600;"></span>
+                        
+                        <!-- Tip Box -->
+                        <div style="margin-top:15px; background-color:var(--bg); padding:10px; border-radius:6px; font-size:11px; color:var(--text-muted); border:1px dashed var(--border);">
+                            💡 Try <strong style="color:var(--accent);">WELCOME10</strong> for 10% off or <strong style="color:var(--accent);">TRIBAL20</strong> for 20% off!
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-accent" onclick="openCheckoutModal()" style="width:100%; font-size:16px; padding:12px;">Checkout Securely &rarr;</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Dynamic Footer Layout (Injected by app.js) -->
+    <footer></footer>
+
+    <!-- Scripts Inclusion -->
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/cart.js"></script>
+</body>
+</html>

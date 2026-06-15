@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribal E-Marketplace Portal - Catalog</title>
+    
+    <!-- Design System Stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <!-- Dynamic Header Navigation (Injected by app.js) -->
+    <header></header>
+
+    <div class="container">
+        <div class="catalog-layout">
+            
+            <!-- Sidebar Catalog Filters Pane -->
+            <aside class="filter-sidebar">
+                
+                <!-- Search Section -->
+                <div class="filter-section">
+                    <h3 class="filter-title">Search Directory</h3>
+                    <input type="text" id="search-input" class="form-control" placeholder="Search paintings, honey...">
+                </div>
+                
+                <!-- Category Checklist Section -->
+                <div class="filter-section">
+                    <h3 class="filter-title">Categories</h3>
+                    <div id="category-filters" class="checkbox-group">
+                        <!-- Populated dynamically by products.js -->
+                        <span style="color:var(--text-muted); font-size:14px;">Loading categories...</span>
+                    </div>
+                </div>
+                
+                <!-- Tribal Community Selection -->
+                <div class="filter-section">
+                    <h3 class="filter-title">Tribal Guild / Region</h3>
+                    <select id="community-filter" class="form-control">
+                        <option value="">All Communities</option>
+                        <option value="Gond Community">Gond Community</option>
+                        <option value="Warli Community">Warli Community</option>
+                        <option value="Bhil Community">Bhil Community</option>
+                    </select>
+                </div>
+                
+                <!-- Price Range Section -->
+                <div class="filter-section">
+                    <h3 class="filter-title">Price Boundaries</h3>
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+                        <input type="number" id="price-min" class="form-control" placeholder="Min" min="0">
+                        <input type="number" id="price-max" class="form-control" placeholder="Max" min="0">
+                    </div>
+                </div>
+                
+                <!-- Clear Button -->
+                <button class="btn btn-outline" style="width:100%;" onclick="window.location.reload();">Clear All Filters</button>
+            </aside>
+            
+            <!-- Marketplace Grid Display -->
+            <main>
+                <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border); padding-bottom:15px; margin-bottom:20px; flex-wrap:wrap; gap:15px;">
+                    <div>
+                        <h1 style="color:var(--primary); font-size:28px;">Artisan Marketplace</h1>
+                        <p style="color:var(--text-muted); font-size:14px; margin-top:4px;">Buy unique, handcrafted heritage directly from creators.</p>
+                    </div>
+                    
+                    <div style="display:flex; align-items:center; gap:10px;">
+                        <label style="font-size:14px; font-weight:600; color:var(--text-muted);">Sort By:</label>
+                        <select id="sort-select" class="form-control" style="width:180px; padding:8px 12px;">
+                            <option value="newest">Newest Arrivals</option>
+                            <option value="price_asc">Price: Low to High</option>
+                            <option value="price_desc">Price: High to Low</option>
+                            <option value="rating_desc">Top Rated Artisans</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="product-grid" id="product-grid">
+                    <!-- Populated dynamically by products.js -->
+                    <div style="text-align:center; padding:50px 0; color:var(--text-muted);">Initialising catalog engine...</div>
+                </div>
+                
+                <!-- Dynamic suggestions load container -->
+                <div id="personalized-suggestions"></div>
+            </main>
+            
+        </div>
+    </div>
+
+    <!-- Dynamic Footer Layout (Injected by app.js) -->
+    <footer></footer>
+
+    <!-- Scripts Inclusion -->
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/products.js"></script>
+</body>
+</html>
