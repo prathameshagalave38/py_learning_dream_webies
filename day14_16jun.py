@@ -1,2 +1,5 @@
 #loopting concepts learning
 
+
+# SYNTAX :
+    
