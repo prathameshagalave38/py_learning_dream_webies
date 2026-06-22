@@ -64,12 +64,12 @@
 
 
 
-#constructure 
-class android:
-    def __init__(self, googleAGE, numberAGE):
-        if googleAGE >= 18 and numberAGE >= 18 :
-            print("test pass")
-        else:
-            print("not pass")
+# #constructure 
+# class android:
+#     def __init__(self, googleAGE, numberAGE):
+#         if googleAGE >= 18 and numberAGE >= 18 :
+#             print("test pass")
+#         else:
+#             print("not pass")
 
-obj = android( 18 ,18)
+# obj = android( 18 ,18)
