@@ -55,23 +55,23 @@
 
 
 
-class CLG :
-    def __init__(self, name ,age):
-        self.name = name
-        self.age = age
+# class CLG :
+#     def __init__(self, name ,age):
+#         self.name = name
+#         self.age = age
     
 
-class RTN(CLG):
-     def __init__(self, name ,age ,add):
-        super().__init__(name,age)
-        self.add = add
+# class RTN(CLG):
+#      def __init__(self, name ,age ,add):
+#         super().__init__(name,age)
+#         self.add = add
     
     
  
 
 
-obj3 =RTN("prathamesh" , 19 , "nanded")
+# obj3 =RTN("prathamesh" , 19 , "nanded")
 
-print(obj3.name)
-print(obj3.age)
-print(obj3.add)
+# print(obj3.name)
+# print(obj3.age)
+# print(obj3.add)
