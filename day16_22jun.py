@@ -73,3 +73,24 @@
 #             print("not pass")
 
 # obj = android( 18 ,18)
+
+
+
+# inheritance
+
+class a :
+    def show (self, name , age):
+        self.name1=name
+        self.age1=age
+        print(self.name1 , self.age1)
+
+class b(a):
+    pass
+
+class c(b):
+    pass
+
+
+obj = c()
+
+obj.show("prathamesh", 18)
