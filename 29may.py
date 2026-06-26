@@ -163,9 +163,3 @@
 #     print("WELL COME - RAM")
 #     print("your corrent acount balance is : 0 $ ")
 
-else :
-    print("invalid acount numbar and password : please try again ")
-
-
-
-
